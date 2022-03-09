@@ -82,7 +82,7 @@ function Calculator() {
         <Col md={4}></Col>
 
         <Col md={3} className="pt-5">
-          <Card className="card border-dark"className="card border-dark"> 
+          <Card className="card border-dark"> 
             <Card.Body>
               <Card
                 border="primary"
