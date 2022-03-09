@@ -1,14 +1,13 @@
 import React from "react";
-import { Button } from 'react-bootstrap';
 import "./CalculatorKey.css";
 function CalculatorKey(props) {
   return (
-    <Button
-      
+    <button
+    type="button" className="btn btn-outline-primary"
       onClick={() => props.onClick(props.keyValue)}
     >
       {props.keyValue}{" "}
-    </Button>
+    </button>
   );
 }
 

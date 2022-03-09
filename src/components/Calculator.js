@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import CalculatorKey from "./CalculatorKey";
-import "./Calculator.css";
 import { Card, Row, Col, Stack } from "react-bootstrap";
 
 function Calculator() {
@@ -83,67 +82,106 @@ function Calculator() {
         <Col md={4}></Col>
 
         <Col md={3} className="pt-5">
-          <Card>
+          <Card className="card border-dark"className="card border-dark"> 
             <Card.Body>
-              <Card border="primary" style={{ height: "4rem" }} className="shadow-md ">
+              <Card
+                border="primary"
+                style={{ height: "4rem" }}
+                className="shadow-md "
+              >
                 <div className="p-3">{nextValue}</div>
               </Card>
               {/* keyboard inputs */}
 
               <Row>
-                <Col md={9} className="pt-5">
+                <Col md={12} className="pt-5">
                   <Stack direction="horizontal" gap={4}>
-                    <CalculatorKey keyValue={"c"} onClick={handleOperation} />
                     <CalculatorKey
-                      keyValue={"\xB1"}
+                      className="key-zero"
+                      keyValue={0}
                       onClick={handleOperation}
                     />
-                    <CalculatorKey keyValue={"%"} onClick={handleOperation} />
-                  </Stack>
-
-                  <Stack direction="horizontal" gap={4} className="pt-2">
-                    <CalculatorKey keyValue={7} onClick={handleOperation} />
-
-                    <CalculatorKey keyValue={8} onClick={handleOperation} />
-                    <CalculatorKey keyValue={9} onClick={handleOperation} />
-                  </Stack>
-
-                  <Stack direction="horizontal" gap={4} className="pt-2">
-                    <CalculatorKey keyValue={4} onClick={handleOperation} />
-
-                    <CalculatorKey keyValue={5} onClick={handleOperation} />
-                    <CalculatorKey keyValue={6} onClick={handleOperation} />
-                  </Stack>
-
-                  <Stack direction="horizontal" gap={4} className="pt-2">
-                    <CalculatorKey keyValue={1} onClick={handleOperation} />
-                    <CalculatorKey keyValue={2} onClick={handleOperation} />
-                    <CalculatorKey keyValue={3} onClick={handleOperation} />
-                  </Stack>
-
-                  <Stack direction="horizontal" gap={4} className="pt-2">
-                    <div >
-                      <CalculatorKey
-                        className="key-zero"
-                        keyValue={0}
-                        onClick={handleOperation}
-                      />
-                    </div>
                     <CalculatorKey
-                      className="key-dot"
-                      keyValue={"."}
+                      keyValue={1}
                       onClick={handleOperation}
+                      className="digit-1"
+                    />
+                    <CalculatorKey
+                      keyValue={2}
+                      onClick={handleOperation}
+                      className="digit-2"
+                    />
+                    <CalculatorKey
+                      keyValue={3}
+                      onClick={handleOperation}
+                      className="digit-3"
                     />
                   </Stack>
-                </Col>
-                {/* keys-operators */}
-                <Col md={3} className="pt-5">
-                  <Stack gap={2}>
-                    <CalculatorKey keyValue={"+"} onClick={handleOperation} />
-                    <CalculatorKey keyValue={"-"} onClick={handleOperation} />
-                    <CalculatorKey keyValue={"*"} onClick={handleOperation} />
+                  <Stack direction="horizontal" gap={4} className="pt-2">
+                    <CalculatorKey
+                      keyValue={4}
+                      onClick={handleOperation}
+                      className="digit-4"
+                    />
+
+                    <CalculatorKey
+                      keyValue={5}
+                      onClick={handleOperation}
+                      className="digit-5"
+                    />
+                    <CalculatorKey
+                      keyValue={6}
+                      onClick={handleOperation}
+                      className="digit-6"
+                    />
+                    <CalculatorKey
+                      keyValue={7}
+                      onClick={handleOperation}
+                      className="digit-7"
+                    />
+                  </Stack>
+
+                  <Stack direction="horizontal" gap={4} className="pt-2 ">
+                    <CalculatorKey
+                      keyValue={8}
+                      onClick={handleOperation}
+                      className="digit-8"
+                    />
+                    <CalculatorKey
+                      keyValue={9}
+                      onClick={handleOperation}
+                      className="digit-9"
+                    />
+                    <CalculatorKey
+                      keyValue={"+"}
+                      onClick={handleOperation}
+                      className="op-div"
+                    />
+                    <CalculatorKey
+                      keyValue={"-"}
+                      onClick={handleOperation}
+                      className="op-sub"
+                    />
+                  </Stack>
+
+                  <Stack direction="horizontal" gap={4} className="pt-2">
+                    <CalculatorKey
+                      keyValue={"*"}
+                      onClick={handleOperation}
+                      className="op-mul"
+                    />
+
                     <CalculatorKey keyValue={"/"} onClick={handleOperation} />
-                    <CalculatorKey keyValue={"="} onClick={handleOperation} />
+                    <CalculatorKey
+                      keyValue={"="}
+                      onClick={handleOperation}
+                      className="eq"
+                    />
+                    <CalculatorKey
+                      keyValue={"c"}
+                      onClick={handleOperation}
+                      className="clear"
+                    />
                   </Stack>
                 </Col>
               </Row>
